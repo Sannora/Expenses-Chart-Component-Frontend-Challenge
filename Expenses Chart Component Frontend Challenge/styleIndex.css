@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+/* Body Elements */
+
+#backgroundPrimary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: hsl(27, 66%, 92%);
+}
+
+#divBalance {
+  background-image: radial-gradient(
+    circle at top,
+    hsl(10, 79%, 65%),
+    hsl(10, 100%, 52%)
+  );
+  display: flex;
+  justify-content: space-between;
+}
+
+#totalSpending {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid thin hsl(27, 66%, 92%);
+}
+
+#spendingCard {
+  background-color: hsl(0, 0%, 100%);
+}
+
+#graphContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#graph {
+  display: flex;
+  width: 100%;
+}
+
+.graphs {
+  background-image: linear-gradient(hsl(10, 79%, 65%), hsl(10, 80%, 59%));
+  cursor: pointer;
+}
+
+.graphHovered {
+  background-image: linear-gradient(hsl(10, 79%, 75%), hsl(10, 80%, 69%));
+  cursor: pointer;
+}
+
+.graphActive {
+  background-image: linear-gradient(hsl(186, 34%, 60%), hsl(186, 40%, 50%));
+}
+
+.amountPerDay {
+  display: none;
+}
+
+.amountPerDayActive {
+  background-color: hsl(25, 47%, 15%);
+  color: hsl(0, 0%, 100%);
+  animation: fadeIn 1s;
+}
+
+.graphs,
+.graphActive,
+.graphHovered .column {
+  margin: 0 auto;
+}
+
+.column {
+  text-align: center;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.columnContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Typography */
+
+#backgroundPrimary {
+  font-family: "DM Sans", sans-serif;
+}
+
+#balanceContent {
+  color: hsl(0, 0%, 100%);
+}
+
+#balance,
+#cardContent,
+#totalAmount,
+#totalPercentage {
+  font-weight: 700;
+}
+
+.days,
+#spendingAmount,
+#spendingPercentage {
+  color: hsl(10, 79%, 65%);
+}
+
+#totalAmount,
+#totalPercentage {
+  color: hsl(25, 47%, 15%);
+}
+
+#totalPercentage {
+  text-align: right;
+}
+
+/* Desktop Responsive Query */
+@media screen and (min-width: 769px) {
+  #containerPrimary {
+    width: 27.5%;
+  }
+
+  #divBalance {
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 0.75em;
+  }
+
+  #spendingCard {
+    margin-top: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 0.75em;
+  }
+
+  #cardContent {
+    margin-bottom: 1em;
+  }
+
+  .column + .column {
+    margin-left: 1em;
+  }
+
+  .graphs {
+    width: 100%;
+    border-radius: 0.25em;
+  }
+
+  .graphActive {
+    width: 100%;
+    border-radius: 0.25em;
+  }
+
+  .graphHovered {
+    width: 100%;
+    border-radius: 0.25em;
+  }
+
+  #graph {
+    padding: 1.5em 2em;
+  }
+
+  #totalSpending {
+    margin: 0 2em 1em 2em;
+    padding-top: 1em;
+  }
+
+  .amountPerDayActive {
+    border-radius: 0.25em;
+    width: 120%;
+    padding: 0.5em 0.1em;
+    margin-bottom: 0.5em;
+  }
+
+  /* Typography */
+  .days,
+  #spendingAmount,
+  #spendingPercentage,
+  .amountPerDayActive {
+    font-size: 0.75em;
+  }
+
+  #totalAmount {
+    font-size: 2.5em;
+  }
+}
+
+/* Mobile Responsive Query */
+@media screen and (max-width: 768px) {
+  #containerPrimary {
+    width: 75%;
+    max-width: 80%;
+  }
+
+  #divBalance {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 0.5em;
+  }
+
+  #spendingCard {
+    margin-top: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 0.5em;
+  }
+
+  #cardContent {
+    margin-bottom: 2em;
+  }
+
+  .column + .column {
+    margin-left: 1em;
+  }
+
+  .graphs {
+    width: 100%;
+    border-radius: 0.3em;
+  }
+
+  .graphActive {
+    width: 100%;
+    border-radius: 0.3em;
+  }
+
+  .graphHovered {
+    width: 100%;
+    border-radius: 0.3em;
+  }
+
+  #graph {
+    padding: 2.5em;
+  }
+
+  #totalSpending {
+    margin: 0 2em 1em 2em;
+    padding-top: 2em;
+  }
+
+  .amountPerDayActive {
+    border-radius: 0.25em;
+    width: 120%;
+    padding: 0.5em 0.1em;
+    margin-bottom: 0.5em;
+  }
+
+  /* Typography */
+  .days,
+  #spendingAmount,
+  #spendingPercentage {
+    font-size: 1em;
+  }
+
+  .amountPerDayActive {
+    font-size: 0.5em;
+  }
+
+  #totalAmount {
+    font-size: 2.5em;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

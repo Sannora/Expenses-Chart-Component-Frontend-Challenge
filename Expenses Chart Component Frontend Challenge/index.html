@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="styleIndex.css" />
+  </head>
+  <body id="backgroundPrimary">
+    <div id="containerPrimary">
+      <div id="divBalance">
+        <div id="balanceContent">
+          My balance
+          <div id="balance">$921.48</div>
+        </div>
+        <svg
+          id="iconLogo"
+          width="72"
+          height="48"
+          viewBox="0 0 72 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <circle fill="#382314" cx="48" cy="24" r="24" />
+            <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23" />
+          </g>
+        </svg>
+      </div>
+      <div id="spendingCard">
+        <div id="cardContent">Spending - Last 7 days</div>
+        <div id="graphContainer">
+          <div id="graph">
+            <div class="column">
+              <div class="amountPerDay" id="amountMon">$17.45</div>
+              <div class="columnContent">
+                <div id="graphMon" class="graphs"></div>
+                <div class="days">mon</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="amountPerDay" id="amountTue">$34.91</div>
+              <div class="columnContent">
+                <div id="graphTue" class="graphs"></div>
+                <div class="days">tue</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="amountPerDay" id="amountWed">$52.36</div>
+              <div class="columnContent">
+                <div id="graphWed" class="graphs"></div>
+                <div class="days">wed</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="amountPerDay" id="amountThu">$31.07</div>
+              <div class="columnContent">
+                <div id="graphThu" class="graphs"></div>
+                <div class="days">thu</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="amountPerDay" id="amountFri">$23.39</div>
+              <div class="columnContent">
+                <div id="graphFri" class="graphs"></div>
+                <div class="days">fri</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="amountPerDay" id="amountSat">$43.28</div>
+              <div class="columnContent">
+                <div id="graphSat" class="graphs"></div>
+                <div class="days">sat</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="amountPerDay" id="amountSun">$25.48</div>
+              <div class="columnContent">
+                <div id="graphSun" class="graphs"></div>
+                <div class="days">sun</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="totalSpending">
+          <div id="spendingAmount">
+            Total this month
+            <div id="totalAmount">$478.33</div>
+          </div>
+          <div id="spendingPercentage">
+            <div id="totalPercentage">+2.4%</div>
+            from last month
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="dataIndex.json"></script>
+    <script type="text/javascript" src="scriptIndex.js"></script>
+  </body>
+</html>
